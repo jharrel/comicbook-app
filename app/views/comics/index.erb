@@ -19,8 +19,13 @@
         <td><%= comic.publisher %></td>
         <td><%= comic.issue %></td>
         <td><a href="/comics/<%= comic.id %>">View</a></td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
+        <td><a href="/comics/<%= comic.id %>/edit">Edit</a></td>
+        <td>
+          <form action="/comics/<%= comic.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="delete" class="btn">
+          </form>
+        </td>
       </tr>
     <% end %>
   </tbody>
