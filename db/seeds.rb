@@ -1,0 +1,5 @@
+Comic.create(title: "spiderman", publisher: "Marvel", issue: 8)
+Comic.create(title: "xmen", publisher: "Marvel", issue: 338)
+Comic.create(title: "wolverine", publisher: "Marvel", issue: 8099998)
+Comic.create(title: "batman", publisher: "DC", issue: 8983888)
+Comic.create(title: "superman", publisher: "Marvel", issue: 3333338)

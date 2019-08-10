@@ -1,16 +1,20 @@
-<h2>Create Comics</h2>
+<h1>Create Comic Entry</h1>
 
-<form class="" action="/comics" method="post">
-  
-  <label for="title">Comic Title</label>
-  <input type="text" name="title" id="title" value="">
+<form action="/comics" method="post">
+  <div class="input-field">
+    <input placeholder="Placeholder" name="title" id="title" type="text" class="validate">
+    <label for="title">Enter Comic</label>
+  </div>
 
-  <label for="publisher">Publisher</label>
-  <input type="text" name="publisher" id="publisher" value="">
+  <div class="input-field">
+    <input placeholder="Placeholder" name="publisher" id="title" type="text" class="validate">
+    <label for="publisher">Enter Publisher (i.e. Marvel, DC, etc.)</label>
+  </div>
 
-  <label for="issue">Issue Number</label>
-  <input type="integer" name="issue" id="issue" value="">
+  <div class="input-field">
+    <input placeholder="Placeholder" name="issue" id="title" type="text" class="validate">
+    <label for="issue">What issue number do you have?</label>
+  </div>
 
-  <input type="submit" name="" value="Create Comic">
-
+  <input type="submit" name="" value="Create Comic Listing" class="btn">
 </form>

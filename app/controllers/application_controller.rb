@@ -8,7 +8,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    @comic = Comic.all 
     erb :welcome
   end
 

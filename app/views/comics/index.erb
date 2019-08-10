@@ -1,0 +1,27 @@
+<h1 class="center">Comics List</h1>
+
+<table class="centered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Publisher</th>
+      <th>Issue Number</th>
+      <th>view</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comics.each do |comic|%>
+      <tr>
+        <td><%= comic.title %></td>
+        <td><%= comic.publisher %></td>
+        <td><%= comic.issue %></td>
+        <td><a href="/comics/<%= comic.id %>">View</a></td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
