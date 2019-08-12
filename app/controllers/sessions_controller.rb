@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Successfully Signed In."
       redirect 'loggedin'
     else
-      @errors = user.errors.full_messages
+      @errors = ["Username or password did not match"]
       erb :'sessions/login'
     end
   end
