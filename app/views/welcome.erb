@@ -1,25 +1,7 @@
 <%= flash[:notice] if flash[:notice] %>
 
 <h2 class="center">Welcome to The Comic Book List App</h2>
-<h5 class="center">With Great Responsibility, Comes A Great Comic Collection. Please login below or <a href="/signup" text-decoration: underline>click here to sign up</a></h5>
+<h5 class="center">With Great Responsibility, Comes A Great Comic Collection. Please <a href="/login" style="white"><font color="white">click here to login</font></a> or if you need an account <a href="/signup" text-decoration: underline><font color="white">Click here to sign up</font></a>!</h5>
 
-<% if @errors %>
-<ul class="light blue">
-  <% @errors.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-</ul>
-<% end %>
-<h1 class="center">Login</h1>
-<form action="/login" method="post" class="center">
-  <div class="input-field">
-    <input placeholder="Username" id="username" name="username" type="text" class="validate center">
-    <label for="username"></label>
-  </div>
-
-  <div class="input-field">
-    <input placeholder="Password" id="password" name="password" type="password" class="validate center">
-    <label for="password"></label>
-  </div>
-  <input type="submit" value="Login" class="btn blue">
-</form>
+<img src="https://d1466nnw0ex81e.cloudfront.net/n_iv/600/1058637.jpg" alt="spider-man" width="500" height="600" class="right">
+<img src="https://cdn.flickeringmyth.com/wp-content/uploads/2018/11/Batman-56-600x922.jpg" alt="batman" width="500" height="600" class="center">

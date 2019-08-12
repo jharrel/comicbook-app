@@ -12,12 +12,12 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="white">
     <% @comics.each do |comic| %>
       <tr>
-        <td><%= comic.title %></td>
-        <td><%= comic.publisher %></td>
-        <td><%= comic.issue %></td>
+        <td><span style="font-weight:bold"><%= comic.title %></span></td>
+        <td><span style="font-weight:bold"><%= comic.publisher %></span></td>
+        <td><span style="font-weight:bold"><%= comic.issue %></span></td>
         <td><a href="/comics/<%= comic.id %>">View</a></td>
         <td><a href="/comics/<%= comic.id %>/edit">Edit</a></td>
         <td>

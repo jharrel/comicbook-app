@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       # Temporary message to be shown in thewelcome page
       flash[:notice] = "Successfully Signed In."
-      redirect '/'
+      redirect 'loggedin'
     else
       @errors = user.errors.full_messages
       erb :'sessions/signup'
@@ -27,11 +27,15 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:notice] = "Successfully Signed In."
-      redirect '/'
+      redirect 'loggedin'
     else
       @errors = user.errors.full_messages
       erb :'sessions/login'
     end
+  end
+
+  get '/loggedin' do
+    erb :'loggedin'
   end
 
   get '/logout' do
