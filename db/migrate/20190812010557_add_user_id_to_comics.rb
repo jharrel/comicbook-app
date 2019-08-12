@@ -1,4 +1,4 @@
-class AddUserIdToComics < ActiveRecord::Migration
+class AddUserIdToComics < ActiveRecord::Migration[4.2]
   def change
     add_column :comics, :user_id, :integer
   end
