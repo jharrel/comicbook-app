@@ -1,21 +1,35 @@
+<% if @errors %>
+  <ul class="red">
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h1>Edit Comic</h1>
 
-<form action="/comics/<%= @comic.id %>" method="post">
-  <input type="hidden" name="_method" value="patch">
-  <div class="input-field">
-    <input placeholder="Placeholder" name="comic[:title]" id="title" type="text" class="validate" value="<%= @comic.title %>">
-    <label for="title">Enter Comic</label>
-  </div>
+  <form action="/comics/<%= @comic.id %>" method="post">
+    <input type="hidden" value="patch" name="_method">
 
-  <div class="input-field">
-    <input placeholder="Placeholder" name="comic[:publisher]" id="title" type="text" class="validate" value="<%= @comic.publisher %>">
-    <label for="publisher">Enter Publisher (i.e. Marvel, DC, etc.)</label>
-  </div>
+    <div class="input-field">
+      <input placeholder="Placeholder" name="comic[title]" id="title" type="text"
+      class="validate" value="<%= @comic.title %>">
+      <label for="title">Title</label>
+    </div>
 
-  <div class="input-field">
-    <input placeholder="Placeholder" name="comic[:issue]" id="title" type="text" class="validate" value="<%= @comic.issue %>">
-    <label for="issue">What issue number do you have?</label>
-  </div>
+    <div class="input-field">
+      <input placeholder="Placeholder" name="comic[publisher]" id="publisher" type="text"
+      class="validate" value="<%= @comic.publisher %>">
+      <label for="publisher">Publisher</label>
+    </div>
 
-  <input type="submit" name="" value="Update Comic Listing" class="btn">
+    <div class="input-field">
+      <input placeholder="Placeholder" name="comic[issue]" id="issue" type="text"
+      class="validate" value="<%= @comic.issue %>">
+      <label for="issue">Issue Number</label>
+    </div>
+
+    <input type="submit" value="Update Comic Listing" class="btn blue">
+
+    
 </form>

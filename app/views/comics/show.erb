@@ -1,2 +1,6 @@
-<h1><%= @comic.title %></h1>
+<h2><%= @comic.title %></h2>
 <h2><%= @comic.publisher %> - issue No. <%= @comic.issue %></h2>
+
+<form action="/comics" method="get">
+<input type="submit" value="Return To Comic List"
+     name="Submit" id="record"  class="btn blue"/>

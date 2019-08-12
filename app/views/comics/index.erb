@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @comics.each do |comic|%>
+    <% @comics.each do |comic| %>
       <tr>
         <td><%= comic.title %></td>
         <td><%= comic.publisher %></td>
@@ -23,7 +23,7 @@
         <td>
           <form action="/comics/<%= comic.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="delete" class="btn">
+            <input type="submit" value="delete" class="btn blue">
           </form>
         </td>
       </tr>

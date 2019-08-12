@@ -19,21 +19,24 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper blue">
         <div class="container">
-          <a href="/" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/comics/new">Create Comic Listing</a></li>
-            <li><a href="/comics">Comics List</a></li>
-            <li><a href="#">Signup</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Signout</a></li>
+          <a href="/" class="brand-logo">Comic App</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down bold">
+            <% if is_logged_in? %>
+              <li><a href="/comics/new">Create Comic Listing</a></li>
+              <li><a href="/comics">Comics List</a></li>
+              <li><a href="/logout">Logout</a></li>
+            <% else %>
+              <li><a href="/signup">Signup</a></li>
+              <li><a href="/login">Login</a></li>
+            <% end %>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Navbar ends -->
-    <div class="wrapper">
+    <div class="container">
         <%= yield %>
     </div>
 
